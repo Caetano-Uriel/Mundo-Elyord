@@ -1,0 +1,129 @@
+body, h1, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: url('./fundo/reino.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  overflow-y: auto;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  margin: 60px auto;
+  border-radius: 16px;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-family: 'Secular One', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Botão */
+.botao {
+  display: inline-block;
+  background-color: #b8612b;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #7c4311;
+}
+
+/* Seção de história */
+.historia {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+.historia h2 {
+  font-family: 'Secular One', sans-serif;
+  font-size: 32px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin: 30px 10px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .historia h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .botao {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .botao {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
