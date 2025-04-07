@@ -1,0 +1,141 @@
+/* Fonte e fundo geral */
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Gradiente de fundo escuro à esquerda */
+main::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.6) 35%, rgba(0, 0, 0, 0.3) 60%, transparent 85%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* Oculta personagens por padrão */
+main .personagem {
+    display: none;
+    height: 100vh;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Personagem visível */
+main .personagem.selecionado {
+    display: block;
+    opacity: 1;
+}
+
+/* Imagem de fundo do personagem */
+main .personagem .imagem {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Texto do personagem */
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    max-width: 420px;
+    z-index: 1;
+}
+
+.conteudo .nome-personagem {
+    color: #fff;
+    font-size: 48px;
+    font-family: "Secular One", sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.conteudo .descricao {
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Painel de botões de personagens */
+.botoes {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 20px 10px;
+    z-index: 2;
+}
+
+/* Botão de personagem */
+.botoes .botao {
+    border: none;
+    background: #000;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botoes .botao img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botão selecionado */
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #d9d9d9;
+}
+
+.botoes .botao.kael.selecionado {
+    box-shadow: 0 0 20px #4d055e;
+}
+
+.botoes .botao.emy.selecionado {
+    box-shadow: 0 0 20px #8d0707;
+}
+
+.botoes .botao.zarion.selecionado {
+    box-shadow: 0 0 20px #4bb5e3;
+}
+
+.botoes .botao.myra.selecionado {
+    box-shadow: 0 0 20px #3c30e4;
+}
+
+.botoes .botao.darak.selecionado {
+    box-shadow: 0 0 20px #FFF047;
+}
+
+/* Efeitos ao passar o mouse */
+.botoes .botao:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ffffff;
+    outline: none;
+}

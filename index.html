@@ -2,40 +2,111 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bem-vindo a Elyord</title>
-  <link href="https://fonts.googleapis.com/css2?family=Secular+One&family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./home/estilo.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo-Elyord</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilo.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
 </head>
 
 <body>
-  <div class="container">
-    <h1>O Reino de Elyord</h1>
-    <p>
-      Em um mundo onde magia e coragem moldam o destino, Elyord surge como o 
-      último bastião da luz contra as forças sombrias que ameaçam a existência.
-      Mergulhe em uma jornada épica repleta de heróis lendários, criaturas mágicas 
-      e batalhas inesquecíveis.
-    </p>
+   <button id="btn-voltar" class="botao-voltar" onClick="paginahome()"> História </button>
 
-    <button id="btn-personagens" class="botao">Conhecer os Personagens</button>
+    <main class="personagens">
+        
+        <div class="personagem selecionado">
+            <picture>
+                <source srcset="./src/elyord/kael2.png" media="(min-width: 768px)">
+                <img class="imagem" src="./src/elyord/mobile-kael2.png" alt="Personagem Kael">
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">Kael</h2>
+                <p class="descricao">Kael é um guerreiro silencioso e letal do reino de Tharion. Após ser atingido por um fragmento de alma durante uma noite sem lua, passou a ouvir sussurros ancestrais e dominar as sombras. Armado com duas adagas encantadas, ele se move com agilidade e precisão, sendo a lâmina escondida na sombra da esperança.</p>
+            </div>
+        </div>
 
-    <div class="historia">
-      <h2>História do Universo de Elyord</h2>
-      <p>Há milênios, o mundo conhecido era governado por um único e imponente reino: Elyord, forjado pela harmonia entre os homens e as Entidades Primordiais — seres míticos, imortais e sábios, que regiam os elementos, o tempo e a essência da vida.</p>
-      
-      <p>Essa era dourada, no entanto, foi quebrada pela chegada de uma força obscura e indescritível: o <strong>Vazion</strong>, um ser nascido do vazio entre as dimensões. Nenhuma entidade, por mais poderosa que fosse, conseguiu vencê-lo sozinha. A guerra durou séculos, corroendo os céus, os mares e a terra.</p>
-      
-      <p>No confronto final, as Entidades uniram sua existência em um único golpe, selando Vazion... mas ao custo de quase toda a vida. O mundo foi despedaçado, e Elyord, o grande reino, fragmentou-se em cinco reinos menores, cada um herdeiro de um pilar essencial da antiga ordem.</p>
+        <div class="personagem">
+            <picture>
+                <source srcset="./src/elyord/emy2.png" media="(min-width: 768px)" />
+                <img class="imagem" src="./src/elyord/mobile-emy2.png" alt="Personagem Emir" />
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">Emy</h2>
+                <p class="descricao">Emy é uma maga dotada de talento nato para canalizar as correntes mágicas que fluem pelo mundo. Quando o fragmento caiu sobre ela, em meio aos bosques de Solarys, seus olhos se abriram para uma realidade além da matéria. Sua magia é instintiva, mutável e poderosa — capaz de reconstruir ou destruir.
+                    Guiada por um espírito curioso e uma mente brilhante, Emy é a estrategista do grupo, vendo conexões onde outros veem caos.
+                    Ela é a chama arcana que molda o destino com sabedoria e coragem.</p>
+            </div>
+        </div>
 
-      <p>Milênios se passaram. As histórias tornaram-se lendas... até que algo caiu do céu. Cinco fragmentos de alma surgiram como chamas vivas, atingindo um jovem em cada reino. Junto com os poderes, vieram memórias que não pertenciam a eles... ecos de vidas antigas, vozes das Entidades que um dia foram.</p>
+        <div class="personagem">
+            <picture>
+                <source srcset="./src/elyord/zarion.png" media="(min-width: 768px)" />
+                <img class="imagem" src="./src/elyord/mobile-zarion.png" alt="Personagem Zarion" />
+            <div class="conteudo">
+                <h2 class="nome-personagem">Zarion</h2>
+                <p class="descricao">Zarion, do reino de Vaelstrom, é o mestre dos céus e trovões. Impulsivo, rebelde, mas leal, ele controla raios e vento com sua lança elétrica. O fragmento de alma o fez um com a tempestade, transformando-o na fúria relampejante que zela por seus aliados.</p>
+            </div>
+        </div>
 
-      <p>Agora, esses cinco escolhidos, marcados pela luz ancestral, devem se reunir. Vazion está voltando. E apenas juntos, eles podem impedir o fim dos Cinco Reinos — e talvez reconstruir Elyord.</p>
-    </div>
-  </div>
+        <div class="personagem">
+            <picture>
+                <source srcset="./src/elyord/myra.png" media="(min-width: 768px)" />
+                <img class="imagem" src="./src/elyord/mobile-myra.png" alt="Personagem Myra" />
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">Myra</h2>
+                <p class="descricao">Myra é uma invocadora mística do reino de Nymea. Dotada da habilidade de moldar água e criar ilusões, ela guarda segredos antigos como o oceano guarda suas ruínas. Sua sabedoria e calma escondem um poder vasto e profundo. Ela é a voz das profundezas.</p>
+            </div>
+        </div>
 
-  <script src="./home/script.js"></script>
+        <div class="personagem">
+            <picture>
+                <source srcset="./src/elyord/darak.png" media="(min-width: 768px)" />
+                <img class="imagem" src="./src/elyord/mobile-darak.png" alt="Personagem Darak" />
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">Darak</h2>
+                <p class="descricao">Darak é o guerreiro rúnico de Ignarok. Criado para lutar e sobreviver, ele foi transformado pelo fragmento de alma em uma força viva de fogo e magia. Seus braços carregam runas que brilham com o calor do combate. Ele é a fúria incandescente que protege com coragem e destrói com fervor.</p>
+            </div>
+        </div>
+    </main>
+
+    <ul class="botoes">
+        <li>
+            <button class="botao kael selecionado">
+                <img src="./src/elyord/icone-kael2.png" alt="Ícone Kael">
+            </button>
+        </li>
+        <li>
+            <button class="botao emy">
+                <img src="./src/elyord/icone-emy2.png" alt="Ícone Emy" />
+            </button>
+        </li>
+        <li>
+            <button class="botao zarion">
+                <img src="./src/elyord/icone-zarion.png" alt="Ícone Zarion" />
+            </button>
+        </li>
+        <li>
+            <button class="botao myra">
+                <img src="./src/elyord/icone-myra.png" alt="Ícone Myra" />
+            </button>
+        </li>
+        <li>
+            <button class="botao darak">
+                <img src="./src/elyord/icone-darak.png" alt="Ícone Darak" />
+            </button>
+        </li>
+    </ul>
+
+    <script src="./src/js/script.js"></script>
 </body>
 
 </html>
